@@ -1,0 +1,196 @@
+:root
+{
+    --white: #fff;
+    --black: #000;
+    --dark-blue: #030829;
+    --deep-blue: #040b38;
+    --blue: #1233FF;
+
+    --principal-font: 
+}
+html
+{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+/* Remover decoracion y corregir 
+paddings*/
+*,*::before,*::after{
+    box-sizing: inherit;
+    text-decoration: none;
+}
+/* Globals */
+
+body{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif; 
+    
+    background-color: var(--deep-blue);
+}
+h1 
+{
+    font-size: 3.8rem;
+}
+h2 
+{
+    font-size: 2.8rem;
+}
+h3 
+{
+    font-size: 1.8rem;
+}
+h1,h2,h3 
+{
+    text-align: center;
+}
+/* Sidebar */
+li
+{
+    padding: 2rem 0;
+    color: var(--white);
+}
+
+ul
+{
+    padding-inline-start: 0;
+}
+nav h1
+{
+    color: var(--white);
+    text-align: center;
+    border-bottom: .2rem solid var(--white);
+    font-size: 2rem;
+}
+
+.button{
+    background-color:cornflowerblue;
+    cursor:pointer;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    margin: 0 auto 1rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+.button:hover{
+    background-color:#2a88;
+}
+/* Clases CSS */
+.sidebar
+{
+    margin-top: 2rem;
+    background-color: var(--black);
+    box-sizing: absolute;
+    width: 20rem;
+    height: auto;
+    padding: 2rem 0;
+    border-radius: 2rem;
+}
+.side-option
+{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-decoration: none;
+    padding: 0 1rem;
+    color: var(--white);
+    margin: auto;
+}
+.side-option:hover 
+{
+    background-image: linear-gradient(
+      left,
+      #2a88e6 7px,
+      rgba(255, 255, 255, 0.1) 7px
+    );
+    background-image: linear-gradient(
+      to right,
+      #2a88e6 7px,
+      rgba(255, 255, 255, 0.1) 7px
+    );
+    color: #ffffff;
+}
+.side-option-active
+{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-decoration: none;
+    padding: 0 1rem;
+    color: var(--white);
+    margin: auto;
+
+    background-image: linear-gradient(
+      left,
+      #2a88 7px,
+      rgba(255, 255, 255, 0.1) 7px
+    );
+    background-image: linear-gradient(
+      to right,
+      #2a88 7px,
+      rgba(255, 255, 255, 0.1) 7px
+    );
+    color: #ffffff;
+}
+/* Contructores generales */
+.row
+{
+    display: flex;
+    column-gap: 2rem;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+/* Formulario */
+.container-form
+{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+
+    width: 100%;
+    padding: 0 4rem;
+    margin:2rem 0 0;
+    background-color: var(--white);
+    border-radius: 1.5rem;
+}
+.container-form p{
+    margin: 0;
+}
+.container-form [type="text"],
+.container-form [type="tel"],
+.container-form [type="submit"],
+.container-form [type="number"]
+{
+    /* display: block; */
+    appearance: none;
+    height: 5rem;
+    /*boder design*/
+    border: none;
+    border-radius: .3rem;
+    
+    width: min(50rem, 100%);
+    font-family: var(--principal-font);
+    font-size: 2rem;
+
+    padding: .4rem;
+    margin: 0 auto 1rem;
+}
+.container-form [type="text"],
+.container-form [type="tel"],
+.container-form [type="number"]
+{
+    border: .2rem solid;
+    border-color: var(--deep-blue);
+}
+#membership_id,
+#points{
+    border: none;
+}
+#search-bar{
+    width: 50rem;
+}

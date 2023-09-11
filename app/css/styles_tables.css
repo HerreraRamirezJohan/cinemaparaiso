@@ -1,0 +1,255 @@
+:root
+{
+    --white: #fff;
+    --black: #000;
+    --dark-blue: #030829;
+    --deep-blue: #040b38;
+    --blue: #1233FF;
+
+    --principal-font: 
+}
+html
+{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+/* Remover decoracion y corregir 
+paddings*/
+*,*::before,*::after{
+    box-sizing: inherit;
+    text-decoration: none;
+}
+/* Globals */
+
+body{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif; 
+    
+    background-color: var(--deep-blue);
+}
+h1 
+{
+    font-size: 3.8rem;
+}
+h2 
+{
+    font-size: 2.8rem;
+}
+h3 
+{
+    font-size: 1.8rem;
+}
+h1,h2,h3 
+{
+    text-align: center;
+}
+/* Sidebar */
+li
+{
+    padding: 2rem 0;
+    color: var(--white);
+}
+
+ul
+{
+    padding-inline-start: 0;
+}
+nav h1
+{
+    color: var(--white);
+    text-align: center;
+    border-bottom: .2rem solid var(--white);
+    font-size: 2rem;
+}
+
+.button{
+    background-color:cornflowerblue;
+    cursor:pointer;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    font-family: var(--principal-font);
+}
+.btn{
+    display: flex;
+    align-items: center;
+    margin: 0 auto .5rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+.button:hover{
+    background-color:#2a88;
+}
+/* Clases CSS side bar */
+.sidebar
+{
+    margin-top: 2rem;
+    background-color: var(--black);
+    box-sizing: absolute;
+    width: 20rem;
+    height: auto;
+    padding: 2rem 0;
+    border-radius: 2rem;
+}
+.side-option
+{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-decoration: none;
+    padding: 0 1rem;
+    color: var(--white);
+    margin: auto;
+}
+.side-option:hover 
+{
+    background-image: linear-gradient(
+      left,
+      #2a88e6 7px,
+      rgba(255, 255, 255, 0.1) 7px
+    );
+    background-image: linear-gradient(
+      to right,
+      #2a88e6 7px,
+      rgba(255, 255, 255, 0.1) 7px
+    );
+    color: #ffffff;
+}
+.side-option-active
+{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-decoration: none;
+    padding: 0 1rem;
+    color: var(--white);
+    margin: auto;
+
+    background-image: linear-gradient(
+      left,
+      #2a88 7px,
+      rgba(255, 255, 255, 0.1) 7px
+    );
+    background-image: linear-gradient(
+      to right,
+      #2a88 7px,
+      rgba(255, 255, 255, 0.1) 7px
+    );
+    color: #ffffff;
+}
+.center{
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+.row
+{
+    display: flex;
+    gap: 2rem;
+}
+.big{
+    font-size: 2rem;
+}
+.column{
+    display: block;
+}
+.line{
+    display: flex;
+}
+.box{
+    margin-top: 1rem;
+    align-items: center;
+}
+.main-container
+{
+        background-color: var(--white);
+        width: 100%;
+        border-radius: 0.8rem;
+        margin-top: 2rem;
+        display: flex;
+}
+/* Diseño del contenedor de formulario */
+@media (min-width: 768px){
+    .main-container
+    {
+        background-color: var(--white);
+        width: 100%;
+        border-radius: 0.8rem;
+        margin-top: 2rem;
+        display: flex;
+    }
+
+    .box1
+    {
+        border-right: 1px solid var(--black);
+        width: 30rem;
+        padding: 0 1rem;
+    }
+    .box2
+    {
+        flex: 1 1 auto;
+    }
+}
+.form-container
+{
+    margin: 0;
+}
+
+.form-container p{
+    margin: 0;
+    font-family: var(--principal-font);
+}
+
+/* Specific designs inputs Movies*/
+.form-container #movie_id{
+    width: 8rem;
+    font-family: var(--principal-font);
+    border: none; 
+    margin-left: 1rem;
+}
+.form-container #summary,
+.form-container #type,
+.form-container #time,
+.form-container #name,
+.form-container #author{
+    width: 100%;
+    font-family: var(--principal-font);
+}
+.form-container #summary{
+    resize: none;
+}
+
+.table
+{
+    overflow: scroll;
+    height: 40rem;
+    border-collapse: separate;
+    border-spacing: 1rem;
+}
+tbody td{
+    text-align: center;
+    padding: .5rem 1rem;
+}
+
+/* Specific designs inputs Products*/
+.form-container #product_name,
+.form-container #stock{
+    width: 100%;
+}
+#product_id{
+    border: none;
+    font-size: 2rem;
+}
+#product_id:focus{
+    outline: none;
+}
+.form-container .line-bottom input{
+    border: none;
+    border-bottom:0.1rem solid var(--black);
+    font-size: 2rem;
+    font-family: var(--principal-font);
+}
+.form-container .line-bottom input:focus{
+    outline: none;
+}
